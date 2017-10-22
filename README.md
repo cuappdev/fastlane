@@ -21,3 +21,19 @@ Choose the latest stable version (2.4.2) and then...
 ## Integrating with your iOS Project
 
 1. Clone this repo inside the root directory of your project.
+
+### Adding App Details
+
+1. Change the appropriate details in Appfile
+
+**Slack Integration**
+
+2. Go to [Custom Integrations](https://cornellappdev.slack.com/apps/manage/custom-integrations) on Slack. 
+3. WebHooks > Add Configuration
+4. Obtain a hooks.slack.com URL, and paste in your Appfile
+
+### Beta Testing Sign-Up Form
+
+1. Using AppDev's Heroku account, follow the **Getting Started** guide [here](https://github.com/fastlane/boarding)
+
+
