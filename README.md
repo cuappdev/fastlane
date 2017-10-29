@@ -1,4 +1,6 @@
-# Cornell AppDev Fastlane Guide
+# Cornell AppDev x Fastlane
+
+How to use [fastlane](fastlane.tools) (and their [docs](docs.fastlane.tools)) on your latest Cornell AppDev project.
 
 ## Installation
 
