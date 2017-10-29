@@ -28,6 +28,11 @@ Choose the latest stable version (2.4.2) and then...
 
 `fastlane ios beta changelog:"Awesome release notes"`
 
+Issues so far...
+Variables aren't working
+Provision needs to be run
+Need to have iPhone Distribution certification w/ private key
+
 ### Adding App Details
 
 1. Change the appropriate details in Appfile
