@@ -11,14 +11,12 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "2.59.0"
+fastlane_version "2.62.0"
 
 default_platform :ios
 
 platform :ios do
   before_all do
-
-    ENV["SLACK_URL"] = CredentialsManager::AppfileConfig.try_fetch_value(:slack_url)
     
   end
 
@@ -30,15 +28,12 @@ platform :ios do
   desc "Creating a code signing certificate and provisioning profile"
   lane :provision do
 
-    app_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
-    apple_id = CredentialsManager::AppfileConfig.try_fetch_value(:apple_id)
-
     produce(
-      username: apple_id,
-      app_identifier: app_identifier,
-      app_name: 'TCAT',
+      username: ENV["APPLE_ID"],
+      app_identifier: ENV["IDENTIFIER"],
+      app_name: ENV["APP_NAME"],
       language: 'English',
-      app_version: '1.0',
+      app_version: ENV["VERSION"],
       sku: '123',
     )
 
@@ -51,24 +46,29 @@ platform :ios do
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do |options|
+
     # match(type: "appstore") # more information: https://codesigning.guide
 
     cocoapods
 
-    gym(scheme: "TCAT") # Build your app - more options available
+    if options[:initial]
+      provision
+    end
+
+    gym(scheme: ENV["SCHEME_NAME"]) # Build your app - more options available
 
     increment_build_number
 
-    # provision # run `provision` for first time uploads
-
     pilot(
+       username: ENV["APPLE_ID"],
        changelog: options[:changelog], 
        distribute_external: true,
-       groups: ["v0 Beta"],
-       beta_app_feedback_email: "cuappdev@gmail.com"
+       groups: ["Beta Testers"],
+       beta_app_feedback_email: ENV["FEEDBACK_EMAIL"]
     )
 
     slack(
+      slack_url: ENV["SLACK_URL"],
       message: "Build #{get_build_number} has been released on TestFlight! 🚀",
       success: true
     )
@@ -79,11 +79,15 @@ platform :ios do
 
   desc "Deploy a new version to the App Store"
   lane :release do
+
     # match(type: "appstore")
     # snapshot
+
     gym # Build your app - more options available
     deliver(force: true)
+
     # frameit
+
   end
 
   # You can define as many lanes as you want
@@ -92,16 +96,20 @@ platform :ios do
     # This block is called, only if the executed lane was successful
 
     # slack(
-    #   message: "Successfully deployed new App Update."
+    #   slack_url: ENV["SLACK_URL"],
+    #   message: "Successfully deployed new App Update.",
+    #   success: true
     # )
+
   end
 
   error do |lane, exception|
 
-    slack(
-       message: exception.message,
-       success: false
-    )
+    # slack(
+    #    slack_url: ENV["SLACK_URL"],
+    #    message: exception.message,
+    #    success: false
+    # )
 
   end
 
