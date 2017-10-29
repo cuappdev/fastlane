@@ -20,7 +20,13 @@ Choose the latest stable version (2.4.2) and then...
   
 ## Integrating with your iOS Project
 
-1. Clone this repo inside the root directory of your project.
+1. Run `fastlane init` at the root directory of your project.
+2. Enter `/fastlane`, and replace **Fastfile** with this repository's version.
+3. Replace **Appfile** with the given file (contains sensitive information!)
+
+## Deploy to Testflight
+
+`fastlane ios beta changelog:"Awesome release notes"`
 
 ### Adding App Details
 
