@@ -1,36 +1,41 @@
 # Cornell AppDev x Fastlane
 
-How to use [fastlane](fastlane.tools) (and their [docs](docs.fastlane.tools)) on your latest Cornell AppDev project.
+How to use [fastlane](fastlane.tools) ([docs](docs.fastlane.tools)) on your latest Cornell AppDev project.
 
 ## Installation
 
-`sudo gem install fastlane -NV`
+**Install fastlane**
+
+````
+sudo gem install fastlane -NV
+````
 
 See **Troubleshooting** if you get an error that your version of Ruby isn't high enough.
+
+**Setup Gemfile**
+
+````
+sudo gem install bundler
+bundle update
+````
   
 ## Integrating with your iOS Project
 
-1. Run `fastlane init` at the root directory of your project.
-2. Enter `/fastlane`, and replace **Fastfile** with this repository's version.
-3. Replace **Appfile** with the given file (contains sensitive information!)
-4. Modify Appfile for the current project
+Edit Appfile's variables to match your project.
 
-
-**Bonus: Beta Tester Sign Up Website**
-
-Using AppDev's Heroku account, follow the **Getting Started** guide [here](https://github.com/fastlane/boarding).
-
-
-**Bonus: Slack Integration**
+**Slack Integration**
 
 1. Go to [Custom Integrations](https://cornellappdev.slack.com/apps/manage/custom-integrations) on Slack. 
 2. WebHooks > Add Configuration
 3. Obtain a hooks.slack.com URL, and modify your Appfile accordingly.
 
+**Beta Tester Sign Up Website**
+
+Using AppDev's Heroku account, follow the **Getting Started** guide [here](https://github.com/fastlane/boarding).
 
 ## Deploy to Testflight
 
-`fastlane ios beta changelog:"Awesome release notes"`
+`bundle exec fastlane ios beta changelog:"Awesome release notes"`
 
 **Important:** If you are deploying for the first time, append `initial:true` to the above command.
 
