@@ -54,7 +54,7 @@ You will need an iPhone Distribution certificate to deploy. If you haven't alrea
 
 ## Troubleshooting
 
-[GitHub](https://github.com/fastlane) • [Docs](https://docs.fastlane.tools)
+[**GitHub**](https://github.com/fastlane) • [**Docs**](https://docs.fastlane.tools)
 
 ### Fastlane Installation Issues (Updating Ruby)
 
