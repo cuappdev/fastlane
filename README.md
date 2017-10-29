@@ -21,7 +21,7 @@ bundle update
   
 ## Integrating with your iOS Project
 
-Edit Appfile's variables to match your project.
+Edit the variables in `fastlane/Appfile` to match your project.
 
 **Slack Integration**
 
