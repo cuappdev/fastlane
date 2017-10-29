@@ -12,17 +12,17 @@ sudo gem install fastlane -NV
 
 See **Troubleshooting** if you get an error that your version of Ruby isn't high enough.
 
-**Setup Gemfile**
+**Install bundler**
 
 ````
 sudo gem install bundler
-bundle update
 ````
   
 ## Integrating with your iOS Project
 
-1. Clone this repository in your project's root directory.
-2. Modify the variables in `fastlane/Appfile` for your project.
+1. Clone this repository in your project's root directory. Move **Gemfile** out of `fastlane/` to the root directory.
+2. Run `sudo bundle update`
+3. Modify the variables in `fastlane/Appfile` for your project.
 
 **Slack Integration**
 
