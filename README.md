@@ -40,6 +40,14 @@ Using AppDev's Heroku account, follow the **Getting Started** guide [here](https
 
 **Important:** If you are deploying for the first time, append `initial:true` to the above command.
 
+#### Notes
+
+Make sure your .gitignore file for your project includes some or all of the following
+- `*.mobileprovision`
+- `*.dSYM.zip`
+- `*.ipa`
+- `*.cer`
+
 You will need an iPhone Distribution certificate to deploy. If you haven't already...
 1. Xcode > Preferences > Accounts > [AppDev Account] > Manage Certificates > Add iOS Distribution
 2. If an error is thrown, have a teammate export the certificate and private key from Keychain Access.
