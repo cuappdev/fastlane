@@ -1,6 +1,6 @@
 # Cornell AppDev x Fastlane
 
-How to use [fastlane](fastlane.tools) ([docs](docs.fastlane.tools)) on your latest Cornell AppDev project.
+How to use [fastlane](https://fastlane.tools) on your latest Cornell AppDev project.
 
 ## Installation
 
@@ -53,6 +53,8 @@ You will need an iPhone Distribution certificate to deploy. If you haven't alrea
 2. If an error is thrown, have a teammate export the certificate and private key from Keychain Access.
 
 ## Troubleshooting
+
+[GitHub](https://github.com/fastlane) • [Docs](https://docs.fastlane.tools)
 
 ### Fastlane Installation Issues (Updating Ruby)
 
