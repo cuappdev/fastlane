@@ -21,7 +21,8 @@ bundle update
   
 ## Integrating with your iOS Project
 
-Edit the variables in `fastlane/Appfile` to match your project.
+1. Clone this repository in your project's root directory.
+2. Modify the variables in `fastlane/Appfile` for your project.
 
 **Slack Integration**
 
