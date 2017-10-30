@@ -37,9 +37,15 @@ platform :ios do
       sku: '123',
     )
 
-    cert
+    cert(
+      username: ENV["APPLE_ID"]
+    )
 
-    sigh(force: true)
+    sigh(
+      username: ENV["APPLE_ID"],
+      app_identifier: ENV["IDENTIFIER"],
+      force: true
+    )
 
   end
 
