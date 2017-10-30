@@ -36,9 +36,18 @@ Using AppDev's Heroku account, follow the **Getting Started** guide [here](https
 
 ## Deploy to Testflight
 
-`bundle exec fastlane ios beta changelog:"Awesome release notes"`
+#### First Deployment
 
-**Important:** If you are deploying for the first time, append `initial:true` to the above command.
+````
+bundle install
+bundle exec fastlane ios beta initial:true changelog:"Awesome release notes"
+````
+
+#### Typical Use
+
+````
+bundle exec fastlane ios beta changelog:"Awesome release notes"
+````
 
 #### Notes
 
