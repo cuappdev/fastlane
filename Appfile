@@ -27,7 +27,7 @@ ENV["APPLE_ID"] = "walker.m.white@gmail.com"
 ENV["TEAM_ID"] = "ZGMCXU7X3U"
 
 # Email address for TestFlight users to send feedback to
-ENV["FEEDBACK_EMAIL"] = "cornellappdev@gmail.com"
+ENV["FEEDBACK_EMAIL"] = "cornellappdev.testing@gmail.com"
 
 
 
