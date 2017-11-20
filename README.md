@@ -10,7 +10,7 @@ How to use [fastlane](https://fastlane.tools) on your latest Cornell AppDev proj
 sudo gem install fastlane -NV
 ````
 
-See **Troubleshooting** if you get an error that your version of Ruby isn't high enough.
+See **Troubleshooting** if you get an error at this step. (Ruby version >= 2.1)
 
 **Install bundler**
 
