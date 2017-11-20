@@ -10,7 +10,7 @@ How to use [fastlane](https://fastlane.tools) on your latest Cornell AppDev proj
 sudo gem install fastlane -NV
 ````
 
-See **Troubleshooting** if you get an error at this step. (Ruby version >= 2.1)
+See **Troubleshooting** if you get an error.
 
 **Install bundler**
 
@@ -66,6 +66,12 @@ You will need an iPhone Distribution certificate to deploy. If you haven't alrea
 [**GitHub**](https://github.com/fastlane) • [**Docs**](https://docs.fastlane.tools)
 
 ### Fastlane Installation Issues (Updating Ruby)
+
+Try installing fastlane with brew
+
+````
+brew cask install fastlane
+````
 
 If your computer's ruby version is not high enough...
 
