@@ -36,15 +36,10 @@ Using AppDev's Heroku account, follow the **Getting Started** guide [here](https
 
 ## Deploy to Testflight
 
-If this is the first time running fastlane on your machine, run
+#### First Use
 
 ````
 bundle install
-````
-
-#### First-Time Deployment to TestFlight
-
-````
 bundle exec fastlane ios beta initial:true changelog:"Awesome release notes"
 ````
 
@@ -70,13 +65,7 @@ You will need an iPhone Distribution certificate to deploy. If you haven't alrea
 
 [**GitHub**](https://github.com/fastlane) • [**Docs**](https://docs.fastlane.tools)
 
-### Fastlane Installation Issues (Updating Ruby)
-
-Try installing fastlane with brew
-
-````
-brew cask install fastlane
-````
+### Fastlane Installation Issues
 
 If your computer's ruby version is not high enough...
 
