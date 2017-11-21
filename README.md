@@ -36,10 +36,15 @@ Using AppDev's Heroku account, follow the **Getting Started** guide [here](https
 
 ## Deploy to Testflight
 
-#### First Deployment
+If this is the first time running fastlane on your machine, run
 
 ````
 bundle install
+````
+
+#### First-Time Deployment to TestFlight
+
+````
 bundle exec fastlane ios beta initial:true changelog:"Awesome release notes"
 ````
 
